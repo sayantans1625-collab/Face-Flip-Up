@@ -1,0 +1,13 @@
+{
+  "name": "Crazy Face Transformer",
+  "description": "A wacky face transformation app that lets you age, swap genders, change backgrounds, and go anime using AI.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "Image Processing",
+    "Generative AI",
+    "Authentication",
+    "Cloud Storage"
+  ]
+}

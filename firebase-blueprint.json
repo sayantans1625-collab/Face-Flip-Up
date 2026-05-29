@@ -1,0 +1,28 @@
+{
+  "entities": {
+    "Transformation": {
+      "title": "Transformation",
+      "description": "A record of a face transformation performed by the user.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "originalImageUrl": { "type": "string" },
+        "transformedImageUrl": { "type": "string" },
+        "type": { 
+          "type": "string",
+          "enum": ["age_progression", "actor_swap", "background_change", "vintage", "anime"]
+        },
+        "metadata": { "type": "object" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "originalImageUrl", "transformedImageUrl", "type", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}/transformations/{transformationId}": {
+      "schema": "Transformation",
+      "description": "Stored face transformations for a specific user."
+    }
+  }
+}
